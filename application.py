@@ -1,11 +1,15 @@
-from flask import Flask
+import os
+
+from flask import Flask, request, jsonify, render_template
+
+
 application = Flask(__name__)
 
 
 @application.route('/')
 def hellow_world():
-    return 'Hi Dhanush, priya'
+    return render_template('index.html')
 
 
 if __name__ == '__main__':
-    app.run('0.0.0.0')
+    application.run('0.0.0.0')
